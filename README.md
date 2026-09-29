@@ -47,6 +47,7 @@ responsive-rust-gui/
 ## Quick Start & Installation
 
 ### Option 1: Workspace / Project Scope (Recommended)
+
 Clone or copy the skill directory into your project's `.agents/skills/` folder:
 
 ```bash
@@ -55,6 +56,7 @@ cp -r responsive-rust-gui .agents/skills/
 ```
 
 ### Option 2: Global Scope
+
 To make the skill available across all local projects in **Antigravity** or **Antigravity CLI (`agy`)**:
 
 ```bash
@@ -66,7 +68,7 @@ cp -r responsive-rust-gui ~/.gemini/antigravity-cli/skills/
 ### Option 3: Via `npx skills` Package Manager
 
 ```bash
-npx skills add github.com/your-username/responsive-rust-gui
+npx skills add github.com/Never-Answers/responsive-rust-gui
 ```
 
 ---
@@ -96,6 +98,7 @@ python3 scripts/validate_layout.py src/ui/
 ## Before & After Refactoring Example
 
 ### Before (Legacy Anti-Patterns)
+
 ```rust
 // Hardcoded dimensions and physical pixel checks inside update loop
 if ctx.screen_rect().width() > 1920.0 {
@@ -105,6 +108,7 @@ if ctx.screen_rect().width() > 1920.0 {
 ```
 
 ### After (Canonical Refactored Code)
+
 ```rust
 // Normalized logical tier resolution & modular tokens
 let width_pt = ctx.screen_rect().width();
@@ -117,4 +121,4 @@ ui.set_width(self.config.tokens.sidebar_width_pt);
 
 ## License
 
-Distributed under the **Apache 2.0** License.
+Distributed under the **WTFPL** License.
